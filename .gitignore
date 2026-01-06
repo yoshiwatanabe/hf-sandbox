@@ -1,0 +1,40 @@
+# 環境
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 出力とログ
+output/
+logs/
+checkpoints/
+*.log
+
+# データと大きなファイル
+data/train.jsonl
+data/valid.jsonl
+data/**/*.jsonl
+!data/simple01/  # simple01 フォルダは除外対象外
+!data/simple01/**/*.jsonl
+*.pt
+*.bin
+*.model
+
+# その他
+.cache/
+wandb/

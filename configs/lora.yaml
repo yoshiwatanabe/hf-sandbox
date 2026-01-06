@@ -1,0 +1,22 @@
+# LoRA 微調整の設定ファイル
+
+# 使用するモデル
+model_name: "rinna/japanese-gpt2-medium"
+
+# LoRA パラメータ
+lora_r: 8                                    # LoRA の秩
+lora_alpha: 16                               # LoRA のスケーリング係数
+lora_dropout: 0.05                           # Dropout 率
+target_modules:                              # LoRA を適用する層
+  - "c_attn"
+
+# 訓練パラメータ
+num_epochs: 3
+batch_size: 4
+learning_rate: 1e-4
+warmup_steps: 100
+max_length: 512
+
+# その他の設定
+seed: 42
+mixed_precision: false                       # GPU メモリが限られている場合は true
